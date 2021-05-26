@@ -25,12 +25,12 @@ public class MyFcmMessageListenerService extends RNPushNotificationListenerServi
                     CleverTapAPI.createNotification(getApplicationContext(), extras);
                 }
             }
+            else
+            {
+                super.onMessageReceived(message);
+            }
         } catch (Throwable t) {
             Log.d("MYFCMLIST", "Error parsing FCM message", t);
         }
-    }
-    @Override
-    public void onNewToken(String token) {
-        CleverTapAPI.getDefaultInstance(this).pushFcmRegistrationId(token,true);
     }
 }
