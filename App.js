@@ -67,7 +67,7 @@ export default class App extends Component {
     CleverTap.recordScreenView('HomeView');
 
     //Create notification channel for Android O and above
-    CleverTap.createNotificationChannel("generic", "React Native Testing", "React Native Testing", 4, true);
+    CleverTap.createNotificationChannel("generic", "generic", "generic", 5, true);
     //initialize the App Inbox
     CleverTap.initializeInbox();
 
